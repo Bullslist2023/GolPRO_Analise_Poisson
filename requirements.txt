@@ -1,0 +1,8 @@
+streamlit
+pandas
+numpy
+scipy
+plotly>=5.0.0
+reportlab
+Pillow
+kaleido
