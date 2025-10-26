@@ -23,7 +23,7 @@ from reportlab.lib import colors as rl_colors
 from PIL import Image
 import datetime
 
-st.set_page_config(page_title="GolPRO v2.0 - Scorpion Premium", page_icon="🦂", layout="wide")
+st.set_page_config(page_title="GolPRO - Análise de Estatística Esportiva", page_icon="🦂", layout="wide")
 
 # --------------------------
 # Style: tema claro -> branco, dourado, royal blue
