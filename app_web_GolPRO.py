@@ -56,8 +56,8 @@ st.markdown(
 # --------------------------
 colh1, colh2 = st.columns([0.82, 0.18])
 with colh1:
-    st.title("🦂 GolPRO v2.0 — Scorpion Premium (Light Edition)")
-    st.markdown("**Análise estatística (Poisson)** para Gols, Escanteios, Finalizações e Cartões — agora com tabelas 0→10 e PDFs sob demanda.")
+    st.title("🦂 GolPRO - Análise de Estatística Esportiva (Light Edition)")
+    st.markdown("**Análise Estatística Esportiva utilizando Distribuição de Poisson** para Gols, Escanteios, Finalizações e Cartões — Agora com tabelas 0→10 e PDFs sob demanda.")
 with colh2:
     logo_file = st.file_uploader("Upload do logotipo (opcional)", type=['png','jpg','jpeg'])
     if logo_file:
@@ -77,17 +77,17 @@ c1, c2 = st.columns(2)
 with c1:
     time_a = st.text_input("Nome do Time A", "Insira o Nome do Time A")
     total_matches_a = st.number_input("Total de jogos (A) usados para calcular médias", min_value=0, max_value=1000, value=20, step=1)
-    media_gols_a = st.number_input("⚽ Média de Gols (A)", min_value=0.0, max_value=20.0, value=1.8, step=0.1)
-    media_esc_a = st.number_input("🚩 Média de Escanteios (A)", min_value=0.0, max_value=50.0, value=6.2, step=0.1)
-    media_final_a = st.number_input("🎯 Média de Finalizações (A)", min_value=0.0, max_value=80.0, value=13.4, step=0.1)
-    media_cart_a = st.number_input("🟨 Média de Cartões (A)", min_value=0.0, max_value=15.0, value=2.3, step=0.1)
+    media_gols_a = st.number_input("⚽ Média de Gols (A)", min_value=0.0, max_value=20.0, value=0.0, step=0.1)
+    media_esc_a = st.number_input("🚩 Média de Escanteios (A)", min_value=0.0, max_value=50.0, value=0.0, step=0.1)
+    media_final_a = st.number_input("🎯 Média de Finalizações (A)", min_value=0.0, max_value=80.0, value=0.0, step=0.1)
+    media_cart_a = st.number_input("🟨 Média de Cartões (A)", min_value=0.0, max_value=15.0, value=0.0, step=0.1)
 with c2:
     time_b = st.text_input("Nome do Time B", "Insira o Nome do Time B")
     total_matches_b = st.number_input("Total de jogos (B) usados para calcular médias", min_value=0, max_value=1000, value=18, step=1)
-    media_gols_b = st.number_input("⚽ Média de Gols (B)", min_value=0.0, max_value=20.0, value=1.5, step=0.1)
-    media_esc_b = st.number_input("🚩 Média de Escanteios (B)", min_value=0.0, max_value=50.0, value=5.8, step=0.1)
-    media_final_b = st.number_input("🎯 Média de Finalizações (B)", min_value=0.0, max_value=80.0, value=12.9, step=0.1)
-    media_cart_b = st.number_input("🟨 Média de Cartões (B)", min_value=0.0, max_value=15.0, value=2.0, step=0.1)
+    media_gols_b = st.number_input("⚽ Média de Gols (B)", min_value=0.0, max_value=20.0, value=0.0, step=0.1)
+    media_esc_b = st.number_input("🚩 Média de Escanteios (B)", min_value=0.0, max_value=50.0, value=0.0, step=0.1)
+    media_final_b = st.number_input("🎯 Média de Finalizações (B)", min_value=0.0, max_value=80.0, value=0.0, step=0.1)
+    media_cart_b = st.number_input("🟨 Média de Cartões (B)", min_value=0.0, max_value=15.0, value=0.0, step=0.1)
 
 st.markdown(
     f"<div class='small-muted'>Nota: as médias são consideradas com base em {total_matches_a} jogos (Time A) e {total_matches_b} jogos (Time B). Quanto maior a amostra, mais confiáveis as estimativas.</div>",
@@ -334,3 +334,4 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
+
